@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "3da84769-9cfe-4271-a970-57904a732e9f",
+		"name": "Newman_Automation_without_DD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Request",
+			"item": [
+				{
+					"name": "GET-FRAUD",
+					"item": [
+						{
+							"name": "FraudCheck",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://mufgfraudcheck.xlabsdfs.com/mufg/api/fraudcheck/ssn/197882139",
+									"protocol": "http",
+									"host": [
+										"mufgfraudcheck",
+										"xlabsdfs",
+										"com"
+									],
+									"path": [
+										"mufg",
+										"api",
+										"fraudcheck",
+										"ssn",
+										"197882139"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET-FICOSCORE",
+					"item": [
+						{
+							"name": "FicoScore Check",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://mufgficoscore.xlabsdfs.com/mufg/api/ficoscorecheck/ssn/197882139",
+									"protocol": "http",
+									"host": [
+										"mufgficoscore",
+										"xlabsdfs",
+										"com"
+									],
+									"path": [
+										"mufg",
+										"api",
+										"ficoscorecheck",
+										"ssn",
+										"197882139"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET-SSN",
+					"item": [
+						{
+							"name": "Customer Validation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://mufgcustomer.xlabsdfs.com/mufg/api/validateCustomerBySsn/197882139",
+									"protocol": "http",
+									"host": [
+										"mufgcustomer",
+										"xlabsdfs",
+										"com"
+									],
+									"path": [
+										"mufg",
+										"api",
+										"validateCustomerBySsn",
+										"197882139"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "POST Request",
+			"item": [
+				{
+					"name": "POST-ACCOUNTOPEN",
+					"item": [
+						{
+							"name": "Account Open",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"requestId\":\"0000012\",\r\n\"account_type\":\"1011\",\r\n\"initial_deposit\":\"2500\",\r\n\"account_goal\":\"vacation\",\r\n\"individual_joint\":\"N\",\r\n\"name\":\"Murugan\",\r\n\"email_address\":\"vmurugan@virtusa.com\",\r\n\"phone_number\":\"+91 99612156\",\r\n\"dob\":\"10-Jun-78\",\r\n\"ssn\":\"PSD996989\",\r\n\"street_address\":\"7th Street\",\r\n\"apt_name\":\"Rahul's Marutham\",\r\n\"city\":\"Chennai\",\r\n\"state\":\"Tamilnadu\",\r\n\"zip\":\"600091\",\r\n\"employer_name\":\"Virtusa\",\r\n\"occupation\":\"Lead Consultant\",\r\n\"source_of_income\":\"Salaried\",\r\n\"account_number\":\"195664\",\r\n\"maturity_date\":\"12-JUL-2018\"\r\n}"
+								},
+								"url": {
+									"raw": "http://mufgaccountopen.xlabsdfs.com/mufg/api/accountopen",
+									"protocol": "http",
+									"host": [
+										"mufgaccountopen",
+										"xlabsdfs",
+										"com"
+									],
+									"path": [
+										"mufg",
+										"api",
+										"accountopen"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST-FUNDTRANSFER",
+					"item": [
+						{
+							"name": "FundTransfer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"accountName\": \"Rajasekar\",\r\n  \"partyId\": 100000009,\r\n  \"paymentAmount\": 150,\r\n  \"fromAccount\": 20653601,\r\n  \"toAccount\": 13570009,\r\n  \"transaction_currency\": \"USD\",\r\n  \"valueDate\": \"2018-07-25T06:37:39.743Z\",\r\n  \"ssnId\": \"SO013079V\",\r\n  \"emailAck\":\"Y\",\r\n  \"emailId\":\"vmurugan@virtusa.com\"\r\n}"
+								},
+								"url": {
+									"raw": "http://mufgfundtransfer.xlabsdfs.com/mufg/api/fundtransfer",
+									"protocol": "http",
+									"host": [
+										"mufgfundtransfer",
+										"xlabsdfs",
+										"com"
+									],
+									"path": [
+										"mufg",
+										"api",
+										"fundtransfer"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
